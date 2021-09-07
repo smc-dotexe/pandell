@@ -4,17 +4,17 @@ using System.Text;
 
 namespace Pandell
 {
-    public class UniqueNumbers
+    public class UniqueNumbers : BaseProperties
     {
         public static HashSet<int> GenerateUniqueNumbers()
         {
-            HashSet<int> generatedNumbers = new HashSet<int>(10000);
+            HashSet<int> generatedNumbers = new HashSet<int>(ListCapacity);
             
             Random randomNumber = new Random();
 
             while (generatedNumbers.Count <= 9999)
             {
-                generatedNumbers.Add(randomNumber.Next(0, 10000));
+                generatedNumbers.Add(randomNumber.Next(0, ListCapacity));
             }
 
             return generatedNumbers;

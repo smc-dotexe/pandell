@@ -4,11 +4,11 @@ using System.Text;
 
 namespace Pandell
 {
-    public class ListOfNumbers
+    public class ListOfNumbers : BaseProperties
     {
         public static List<int> InsertUniqueNumbersToList(HashSet<int> uniqueNumbers)
         {
-            List<int> listOfNumbers = new List<int>(10000);
+            List<int> listOfNumbers = new List<int>(ListCapacity);
             foreach (int num in uniqueNumbers)
             {
                 listOfNumbers.Add(num);

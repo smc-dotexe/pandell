@@ -9,10 +9,11 @@ namespace Pandell
         {
             List<int> listOfUniqueNumbers = ListOfNumbers.InsertUniqueNumbersToList(UniqueNumbers.GenerateUniqueNumbers());
 
-            foreach (int num in listOfUniqueNumbers)
-            {
-                Console.WriteLine(num);
-            }
+            // iterating through the list to showcase the unique numbers
+            //foreach (int num in listOfUniqueNumbers)
+            //{
+            //    Console.WriteLine(num);
+            //}
 
             Console.WriteLine("list length: " + listOfUniqueNumbers.Count);
         }
