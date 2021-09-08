@@ -7,15 +7,23 @@ namespace Pandell
     {
         static void Main(string[] args)
         {
-            List<int> listOfUniqueNumbers = ListOfNumbers.InsertUniqueNumbersToList(UniqueNumbers.GenerateUniqueNumbers());
+            try
+            {
+                ListOfNumbers listOfNumbers = new ListOfNumbers(0, 10000);
+                List<int> listOfUniqueNumbers = listOfNumbers.RandomizeList();
 
-            // iterating through the list to showcase the unique numbers
-            //foreach (int num in listOfUniqueNumbers)
-            //{
-            //    Console.WriteLine(num);
-            //}
+                foreach (int num in listOfUniqueNumbers)
+                {
+                    Console.WriteLine(num);
+                }
 
-            Console.WriteLine("list length: " + listOfUniqueNumbers.Count);
+                Console.WriteLine("List length: " + listOfUniqueNumbers.Count);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
         }
     }
 }
