@@ -10,14 +10,14 @@ namespace Pandell
             try
             {
                 ListOfNumbers listOfNumbers = new ListOfNumbers(0, 10000);
-                List<int> listOfUniqueNumbers = listOfNumbers.RandomizeList();
+                List<int> randomizedNumbers = listOfNumbers.RandomizeList();
 
-                foreach (int num in listOfUniqueNumbers)
+                foreach (int num in randomizedNumbers)
                 {
                     Console.WriteLine(num);
                 }
 
-                Console.WriteLine("List length: " + listOfUniqueNumbers.Count);
+                Console.WriteLine("List length: " + randomizedNumbers.Count);
             }
             catch (Exception ex)
             {

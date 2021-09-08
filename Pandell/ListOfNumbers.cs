@@ -8,8 +8,10 @@ namespace Pandell
 {
     public class ListOfNumbers : BaseProperties
     {
+        public ListOfNumbers(int minList, int maxList) : base(minList, maxList) 
+        {}
+
         public static readonly List<int> listOfNumbers = Enumerable.Range(MinList, MaxList).ToList();
-        public ListOfNumbers(int minList, int maxList) : base(minList, maxList) {}
 
         public List<int> RandomizeList()
         {
